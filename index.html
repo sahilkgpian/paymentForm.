@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #007bff;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* Add background colors to specific sections */
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .payment-info {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <h1>Payment Form</h1>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Name: <input type="text" name="name" required></p>
+                <fieldset>
+                    <legend>Gender/Sex</legend>
+                    <p>
+                        Male <input type="radio" name="gender" id="male">
+                        Female <input type="radio" name="gender" id="female">
+                        Others <input type="radio" name="gender" id="others">
+                    </p>
+                </fieldset>
+                <p>Email: <input type="email" name="email" id="email"></p>
+            </div>
+            <hr>
+            <div class="payment-info">
+                <h2>Payment Information</h2>
+                <p>
+                    Card Types:
+                    <select name="card_type" id="card_type">
+                        <option value="">--Select a Card Type--</option>
+                        <option value="visa">Visa</option>
+                        <option value="rupay">Rupay</option>
+                        <option value="mastercard">Mastercard</option>
+                    </select>
+                </p>
+                <p>Card Number <input type="number" name="card_number" id="card_number"></p>
+                <p>Expiration Date: <input type="date" name="exp_date" id="exp_date"></p>
+                <p>CVV <input type="password" name="cvv" id="cvv"></p>
+            </div>
+            <input type="submit" value="Pay Now">
+        </form>
+    </div>
+</body>
+</html>
